@@ -1,34 +1,42 @@
 import Container from "@/components/container";
-import MoreStories from "@/components/more-stories";
-import HeroPost from "@/components/hero-post";
-import Intro from "@/components/intro";
 import Layout from "@/components/layout";
-import { getAllPostsForHome } from "@/lib/api";
+import Header from "@/components/header";
+import { getContent } from "@/lib/api";
 import Head from "next/head";
-import { CMS_NAME } from "@/lib/constants";
+import { Builder, BuilderComponent, builder } from "@builder.io/react";
+import { CMS_NAME, BUILDER_CONFIG } from "@/lib/constants";
+import "@builder.io/widgets";
 
-export default function Index({ allPosts, preview }) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+// Import the Builder registry to register components
+import "@/lib/builder-registry";
+
+builder.init(BUILDER_CONFIG.apiKey);
+Builder.isStatic = true;
+
+export default function Index({ content, preview }) {
   return (
     <>
       <Layout preview={preview}>
         <Head>
-          <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+          <title>{`Next.js Example with ${CMS_NAME}`}</title>
         </Head>
         <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.data.title}
-              coverImage={heroPost.data.image}
-              date={heroPost.lastUpdated}
-              author={heroPost.data.author.value?.data}
-              slug={heroPost.data.slug}
-              excerpt={heroPost.data.intro}
+          <Header />
+          {content ? (
+            <BuilderComponent
+              model="page"
+              content={content}
+              options={{ includeRefs: true }}
             />
+          ) : (
+            <div className="text-center py-20">
+              <h2 className="text-2xl font-bold mb-4">No Content Found</h2>
+              <p>
+                Create content in Builder.io and connect it to this page to see
+                it here.
+              </p>
+            </div>
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>
     </>
@@ -36,9 +44,10 @@ export default function Index({ allPosts, preview }) {
 }
 
 export async function getStaticProps({ preview = null }) {
-  const allPosts = (await getAllPostsForHome(preview)) || [];
+  const content = await getContent(BUILDER_CONFIG.contentModel, preview);
+
   return {
-    props: { allPosts, preview },
+    props: { content: content || null, preview },
     revalidate: 20,
   };
 }

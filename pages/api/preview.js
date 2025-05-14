@@ -1,30 +1,32 @@
-import { getDraftPost } from "@/lib/api";
+import { getDraftContent } from "@/lib/api";
 import { BUILDER_CONFIG } from "@/lib/constants";
 import querystring from "querystring";
 
 export default async function preview(req, res) {
-  const postId = req.query[`builder.overrides.${BUILDER_CONFIG.postsModel}`];
-  if (req.query.secret !== BUILDER_CONFIG.previewSecret || !postId) {
+  // Check the secret and content ID
+  const contentId =
+    req.query[`builder.overrides.${BUILDER_CONFIG.contentModel}`];
+
+  if (req.query.secret !== BUILDER_CONFIG.previewSecret || !contentId) {
     return res.status(401).json({ message: "Invalid request" });
   }
 
-  // Check if the post with the given `slug` exists
-  const post = await getDraftPost(postId);
+  // Fetch the content
+  const content = await getDraftContent(BUILDER_CONFIG.contentModel, contentId);
 
-  // If the slug doesn't exist prevent preview mode from being enabled
-  if (!post) {
-    return res.status(401).json({ message: "Invalid post" });
+  // If the content doesn't exist prevent preview mode from being enabled
+  if (!content) {
+    return res.status(401).json({ message: "Invalid content" });
   }
 
   // Enable Preview Mode by setting the cookies
   res.setPreviewData({
-    postDraftId: postId,
+    draftContentId: contentId,
   });
 
-  // Redirect to the path from the fetched post
-  // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
+  // Redirect to the home page
   res.writeHead(307, {
-    Location: `/posts/${post.data.slug}?${querystring.stringify(req.query)}`,
+    Location: `/?${querystring.stringify(req.query)}`,
   });
   res.end();
 }

@@ -14,7 +14,7 @@ export default function Alert({ preview }) {
         <div className="py-2 text-center text-sm">
           {preview ? (
             <>
-              This is page is a preview.{" "}
+              This page is a preview.{" "}
               <a
                 href="/api/exit-preview"
                 className="underline hover:text-cyan duration-200 transition-colors"
@@ -25,7 +25,7 @@ export default function Alert({ preview }) {
             </>
           ) : (
             <>
-              The source code for this blog is{" "}
+              The source code for this project is{" "}
               <a
                 href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
                 className="underline hover:text-success duration-200 transition-colors"
