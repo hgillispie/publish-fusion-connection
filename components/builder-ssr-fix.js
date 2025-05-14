@@ -12,10 +12,30 @@ export function BuilderSsrFix() {
     if (typeof window !== "undefined") {
       window.builderLazyLoadImages = false;
       window.builderNoSsr = true;
-    }
 
-    // Prevent other dynamic attributes that might cause hydration issues
-    builder.set({ inlineCss: true });
+      // Set builder options directly on the builder object
+      // Don't use builder.set() as it doesn't exist
+      builder.apiVersion = "v3";
+      builder.noTrack = true;
+
+      // Apply configuration through request options instead
+      const origGet = builder.get;
+      if (origGet) {
+        builder.get = function (modelName, options = {}) {
+          const newOptions = {
+            ...options,
+            options: {
+              ...options.options,
+              noWrap: true,
+              static: true,
+              inlineCss: true,
+              ...(options.options || {}),
+            },
+          };
+          return origGet.call(this, modelName, newOptions);
+        };
+      }
+    }
   }, []);
 
   return null;
