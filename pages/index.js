@@ -3,9 +3,10 @@ import Layout from "@/components/layout";
 import Header from "@/components/header";
 import { getContent } from "@/lib/api";
 import Head from "next/head";
-import { Builder, BuilderComponent, builder } from "@builder.io/react";
+import { Builder, builder } from "@builder.io/react";
 import { CMS_NAME, BUILDER_CONFIG } from "@/lib/constants";
 import "@builder.io/widgets";
+import BuilderHydrationFix from "@/components/builder-hydration-fix";
 
 // Import the Builder registry to register components
 import "@/lib/builder-registry";
@@ -24,10 +25,14 @@ export default function Index({ content, preview }) {
         <Container>
           <Header />
           {content ? (
-            <BuilderComponent
+            <BuilderHydrationFix
               model="page"
               content={content}
-              options={{ includeRefs: true }}
+              options={{
+                includeRefs: true,
+                noTrack: true,
+                staticContent: true,
+              }}
             />
           ) : (
             <div className="text-center py-20">

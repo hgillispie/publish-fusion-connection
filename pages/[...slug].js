@@ -6,8 +6,9 @@ import Layout from "@/components/layout";
 import { getAllContent, getDraftContent, getContent } from "@/lib/api";
 import Head from "next/head";
 import { CMS_NAME, BUILDER_CONFIG } from "@/lib/constants";
-import { Builder, builder, BuilderComponent } from "@builder.io/react";
+import { Builder, builder } from "@builder.io/react";
 import "@builder.io/widgets";
+import BuilderHydrationFix from "@/components/builder-hydration-fix";
 
 // Import the Builder registry to register components
 import "@/lib/builder-registry";
@@ -34,10 +35,14 @@ export default function Page({ content, preview }) {
           <title>{`${content?.data?.title || "Page"} | ${CMS_NAME}`}</title>
         </Head>
         <article>
-          <BuilderComponent
+          <BuilderHydrationFix
             model={BUILDER_CONFIG.contentModel}
             content={content}
-            options={{ includeRefs: true }}
+            options={{
+              includeRefs: true,
+              noTrack: true,
+              staticContent: true,
+            }}
           />
         </article>
       </Container>

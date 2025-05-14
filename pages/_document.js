@@ -11,6 +11,16 @@ export default function Document() {
               // Prevent Builder.io from rendering differently on client vs server
               window.builderNoSsr = true;
               window.builderLazyLoadImages = false;
+              
+              // Fix for builder-inline-styles attribute
+              document.addEventListener('DOMContentLoaded', function() {
+                // Find all elements with builder-inline-styles attributes and remove them
+                setTimeout(function() {
+                  document.querySelectorAll('[builder-inline-styles]').forEach(function(el) {
+                    el.removeAttribute('builder-inline-styles');
+                  });
+                }, 0);
+              });
             `,
           }}
         />
