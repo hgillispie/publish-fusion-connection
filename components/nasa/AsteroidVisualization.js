@@ -36,8 +36,11 @@ export default function AsteroidVisualization() {
         processed.filter((a) => a.isPotentiallyHazardous).length,
       );
     } catch (err) {
-      setError("Failed to load asteroid data. Please try again later.");
-      console.error(err);
+      console.error("Error in asteroid visualization:", err);
+      setError(
+        err.message ||
+          "Failed to load asteroid data. Please try again later. If the issue persists, the NASA API may be experiencing high traffic or maintenance.",
+      );
     } finally {
       setLoading(false);
     }
