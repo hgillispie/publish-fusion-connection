@@ -1,7 +1,9 @@
 import "@/styles/index.css";
+import "@/styles/dark-mode.css";
 import "@/lib/builder-registry";
 import Head from "next/head";
 import { useEffect } from "react";
+import { ThemeProvider } from "@/lib/theme-context";
 
 function MyApp({ Component, pageProps }) {
   // Only run on client side
@@ -14,12 +16,14 @@ function MyApp({ Component, pageProps }) {
 
     return () => {
       // Clean up on unmount
-      document.body.removeChild(script);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Head>
         {/* Force the client to not care about hydration mismatches */}
         <script
@@ -32,7 +36,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }
 

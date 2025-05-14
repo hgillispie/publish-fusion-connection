@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "@/components/container";
 import Header from "@/components/header";
-import Layout from "@/components/layout";
+import LayoutWithTheme from "@/components/layout-with-theme";
 import { getAllContent, getDraftContent, getContent } from "@/lib/api";
 import Head from "next/head";
 import { CMS_NAME, BUILDER_CONFIG } from "@/lib/constants";
@@ -28,7 +28,7 @@ export default function Page({ content, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
+    <LayoutWithTheme preview={preview}>
       <Container>
         <Header />
         <Head>

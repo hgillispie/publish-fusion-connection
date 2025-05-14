@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import Layout from "@/components/layout";
+import LayoutWithTheme from "@/components/layout-with-theme";
 import Header from "@/components/header";
 import Head from "next/head";
 import { CMS_NAME } from "@/lib/constants";
@@ -8,7 +8,7 @@ import AsteroidVisualization from "@/components/nasa/AsteroidVisualization";
 export default function AsteroidsPage({ preview }) {
   return (
     <>
-      <Layout preview={preview}>
+      <LayoutWithTheme preview={preview}>
         <Head>
           <title>{`NASA Asteroid Visualization | ${CMS_NAME}`}</title>
           <meta

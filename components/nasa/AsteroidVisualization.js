@@ -92,10 +92,8 @@ export default function AsteroidVisualization() {
   return (
     <div className="mb-10">
       <div className="mb-8 text-center">
-        <h2 className="text-4xl font-bold mb-2 text-gray-800">
-          Near Earth Asteroids
-        </h2>
-        <p className="text-lg text-gray-600">
+        <h2 className="text-4xl font-bold mb-2">Near Earth Asteroids</h2>
+        <p className="text-lg">
           Explore asteroids that will pass near Earth in the coming days
         </p>
       </div>

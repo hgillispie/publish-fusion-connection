@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import Layout from "@/components/layout";
+import LayoutWithTheme from "@/components/layout-with-theme";
 import Header from "@/components/header";
 import { getContent } from "@/lib/api";
 import Head from "next/head";
@@ -18,7 +18,7 @@ Builder.isStatic = true;
 export default function Index({ content, preview }) {
   return (
     <>
-      <Layout preview={preview}>
+      <LayoutWithTheme preview={preview}>
         <Head>
           <title>{`Next.js Example with ${CMS_NAME}`}</title>
         </Head>
