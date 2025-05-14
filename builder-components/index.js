@@ -141,7 +141,7 @@ Builder.registerComponent(ProductsRow, {
           link: "/products/checker-fleece",
         },
         {
-          image: componentScreenshots.productsRow,
+          image: componentScreenshots.productCard,
           name: "Fog Linen Jacket",
           price: "$134",
           color: "Soft Blue",
@@ -269,13 +269,13 @@ Builder.registerComponent(FeatureSection, {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere erat a ante vestibulum, in volutpat ligula elementum.",
         },
         {
-          icon: componentScreenshots.featureSection,
+          icon: componentScreenshots.featureIcon,
           title: "Carbon Neutral",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere erat a ante vestibulum, in volutpat ligula elementum.",
         },
         {
-          icon: componentScreenshots.navbar,
+          icon: componentScreenshots.featureIcon,
           title: "Advanced Dye Tech",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere erat a ante vestibulum, in volutpat ligula elementum.",
@@ -339,7 +339,7 @@ Builder.registerComponent(ShopSection, {
           link: "/products/checker-fleece",
         },
         {
-          image: componentScreenshots.shopSection,
+          image: componentScreenshots.productCard,
           name: "Checker Fleece",
           price: "$92",
           color: "Soft Blue",
