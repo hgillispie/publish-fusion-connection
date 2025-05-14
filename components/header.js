@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "./theme-toggle";
 
 export default function Header() {
   return (
@@ -8,9 +9,20 @@ export default function Header() {
           Content
         </Link>
       </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated site with Next.js and Builder.io
-      </h4>
+      <div className="flex flex-col md:flex-row items-center">
+        <div className="flex items-center">
+          <ThemeToggle />
+          <h4 className="text-center md:text-left text-lg mt-5 md:pl-4 md:mr-6 ml-4">
+            A statically generated site with Next.js and Builder.io
+          </h4>
+        </div>
+        <Link
+          href="/asteroids"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md mt-4 md:mt-0 transition-colors"
+        >
+          Asteroid Visualization
+        </Link>
+      </div>
     </section>
   );
 }
