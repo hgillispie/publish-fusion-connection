@@ -3,6 +3,7 @@ import BuilderImage from "../components/builder-image";
 import Head from "next/head";
 import { CMS_NAME } from "@/lib/constants";
 import Link from "next/link";
+import Navbar from "../components/navbar";
 
 export default function Index({ preview }) {
   return (
@@ -17,6 +18,7 @@ export default function Index({ preview }) {
             fontFamily: "Poppins, -apple-system, Roboto, Helvetica, sans-serif",
           }}
         >
+          <Navbar />
           <div className="self-center flex w-full max-w-[1200px] flex-col items-center justify-center">
             <div className="flex w-full flex-col items-stretch font-semibold leading-normal">
               <div className="relative rounded-lg overflow-hidden w-full min-h-[588px]">
