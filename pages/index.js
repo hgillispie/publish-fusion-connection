@@ -1,5 +1,5 @@
-import { Layout } from "@/components";
-import { Image } from "@/components";
+import Layout from "../components/layout";
+import BuilderImage from "../components/builder-image";
 import Head from "next/head";
 import { CMS_NAME } from "@/lib/constants";
 import Link from "next/link";
@@ -20,7 +20,7 @@ export default function Index({ preview }) {
           <div className="self-center flex w-full max-w-[1200px] flex-col items-center justify-center">
             <div className="flex w-full flex-col items-stretch font-semibold leading-normal">
               <div className="relative rounded-lg overflow-hidden w-full min-h-[588px]">
-                <Image
+                <BuilderImage
                   src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/f5f486a35a80c0e8aea6037c50a5571ee46cf816"
                   alt="Essential Accessories"
                   layout="fill"
@@ -50,7 +50,7 @@ export default function Index({ preview }) {
                   className="relative rounded-lg overflow-hidden"
                   style={{ width: "339px", paddingBottom: "80.5%" }}
                 >
-                  <Image
+                  <BuilderImage
                     src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/6fbe3eec1b440f317788d099eda9885923a7fbc6"
                     alt="Checker Fleece"
                     layout="fill"
@@ -76,7 +76,7 @@ export default function Index({ preview }) {
                   className="relative rounded-lg overflow-hidden"
                   style={{ width: "339px", paddingBottom: "80.5%" }}
                 >
-                  <Image
+                  <BuilderImage
                     src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/9fa19dc6c196122771befb5d5a0bcb79569a45f2"
                     alt="Fog Linen Jacket"
                     layout="fill"
@@ -102,7 +102,7 @@ export default function Index({ preview }) {
                   className="relative rounded-lg overflow-hidden"
                   style={{ width: "339px", paddingBottom: "80.5%" }}
                 >
-                  <Image
+                  <BuilderImage
                     src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/cba3d52ac13d5e895b713537f0b523e5fd3e374a"
                     alt="Angular Sunglasses"
                     layout="fill"
@@ -128,7 +128,7 @@ export default function Index({ preview }) {
                   className="relative rounded-lg overflow-hidden"
                   style={{ width: "339px", paddingBottom: "80.5%" }}
                 >
-                  <Image
+                  <BuilderImage
                     src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/6ea3eb23e6b0b7d902fffd400c23d0a13b90284d"
                     alt="Checker Fleece"
                     layout="fill"
@@ -171,7 +171,7 @@ export default function Index({ preview }) {
                 className="relative rounded-lg overflow-hidden flex-1 min-w-[240px] my-auto md:max-w-[470px]"
                 style={{ paddingBottom: "105%" }}
               >
-                <Image
+                <BuilderImage
                   src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/d954ad608a20840cd3a81f29461c95c988371492"
                   alt="Sustainable Jeans"
                   layout="fill"
@@ -193,7 +193,7 @@ export default function Index({ preview }) {
                     className="relative rounded-lg overflow-hidden"
                     style={{ width: "100%", paddingBottom: "80.5%" }}
                   >
-                    <Image
+                    <BuilderImage
                       src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/6fbe3eec1b440f317788d099eda9885923a7fbc6"
                       alt="Checker Fleece"
                       layout="fill"
@@ -219,7 +219,7 @@ export default function Index({ preview }) {
                     className="relative rounded-lg overflow-hidden"
                     style={{ width: "100%", paddingBottom: "80.5%" }}
                   >
-                    <Image
+                    <BuilderImage
                       src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/000e6998788e0d6a03d576303978f317a3db9a18"
                       alt="Checker Fleece"
                       layout="fill"
@@ -245,7 +245,7 @@ export default function Index({ preview }) {
                     className="relative rounded-lg overflow-hidden"
                     style={{ width: "100%", paddingBottom: "80.5%" }}
                   >
-                    <Image
+                    <BuilderImage
                       src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/6fbe3eec1b440f317788d099eda9885923a7fbc6"
                       alt="Checker Fleece"
                       layout="fill"
@@ -285,7 +285,7 @@ export default function Index({ preview }) {
                 {/* Icon Card 1 */}
                 <div className="flex-1 min-w-[240px] min-h-[268px] flex flex-col items-center justify-between md:max-w-[341px]">
                   <div className="relative w-[91px] h-[91px]">
-                    <Image
+                    <BuilderImage
                       src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/98cebbbd5a1dd7705e5a1fab4261f22b1208fadf"
                       alt="2-Day Shipping"
                       layout="fill"
@@ -305,7 +305,7 @@ export default function Index({ preview }) {
                 {/* Icon Card 2 */}
                 <div className="flex-1 min-w-[240px] min-h-[268px] flex flex-col items-center justify-between md:max-w-[341px]">
                   <div className="relative w-[91px] h-[91px]">
-                    <Image
+                    <BuilderImage
                       src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/874a7ccef8a5951e026ff954e4c1b50850f22853"
                       alt="Carbon Neutral"
                       layout="fill"
@@ -325,7 +325,7 @@ export default function Index({ preview }) {
                 {/* Icon Card 3 */}
                 <div className="flex-1 min-w-[240px] min-h-[268px] flex flex-col items-center justify-between md:max-w-[341px]">
                   <div className="relative w-[91px] h-[91px]">
-                    <Image
+                    <BuilderImage
                       src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/80f0b01486406cdbeeb2d130c77c6e1d2fb3fb2e"
                       alt="Advanced Dye Tech"
                       layout="fill"
