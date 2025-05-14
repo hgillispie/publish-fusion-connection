@@ -1,35 +1,53 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const builderLoader = ({ src, width, quality }) => {
   return `${src}?width=${width}&quality=${quality || 75}`;
 };
 
 const BuilderImage = (props) => {
-  // Use client-side only rendering to avoid hydration mismatch
-  const [isMounted, setIsMounted] = useState(false);
+  const imgRef = useRef(null);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    // Remove builder-inline-styles attribute that causes hydration mismatch
+    if (imgRef.current) {
+      imgRef.current.removeAttribute("builder-inline-styles");
 
-  // During SSR, render a placeholder with similar dimensions
-  if (!isMounted) {
-    return (
-      <div
-        style={{
-          width: props.width,
-          height: props.height,
-          background: "#f0f0f0",
-        }}
-        aria-hidden="true"
-        data-builder-image-placeholder="true"
-      />
-    );
-  }
+      // Apply any inline styles directly to ensure consistency
+      const style = props.style || {};
+      Object.keys(style).forEach((key) => {
+        imgRef.current.style[key] = style[key];
+      });
+    }
 
-  // After client-side hydration, render the actual image
-  return <Image loader={builderLoader} {...props} />;
+    // Mark as loaded to trigger any conditional rendering if needed
+    setHasLoaded(true);
+  }, [props.style]);
+
+  // Extract builder-specific props to prevent them from passing to the Image component
+  const {
+    "builder-id": builderId,
+    "builder-inline-styles": builderInlineStyles,
+    builderAttributes,
+    builderCss,
+    ...safeProps
+  } = props;
+
+  // Ensure we have width and height to prevent layout shifts
+  const imageProps = {
+    ...safeProps,
+    width: safeProps.width || 500,
+    height: safeProps.height || 300,
+    alt: safeProps.alt || "",
+    ref: imgRef,
+    // Add onLoad handler to ensure all resources are properly loaded
+    onLoad: () => {
+      if (props.onLoad) props.onLoad();
+    },
+  };
+
+  return <Image loader={builderLoader} {...imageProps} />;
 };
 
 export default BuilderImage;
