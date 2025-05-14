@@ -9,6 +9,7 @@ import "@builder.io/widgets";
 
 // Import the Builder registry to register components
 import "@/lib/builder-registry";
+import "@/lib/builder-registry-nasa";
 
 builder.init(BUILDER_CONFIG.apiKey);
 Builder.isStatic = true;
