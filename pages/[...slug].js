@@ -46,7 +46,7 @@ export default function Page({ content, preview }) {
           />
         </article>
       </Container>
-    </Layout>
+    </LayoutWithTheme>
   );
 }
 

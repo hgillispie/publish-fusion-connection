@@ -20,7 +20,7 @@ export default function AsteroidsPage({ preview }) {
           <Header />
           <AsteroidVisualization />
         </Container>
-      </Layout>
+      </LayoutWithTheme>
     </>
   );
 }

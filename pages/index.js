@@ -44,7 +44,7 @@ export default function Index({ content, preview }) {
             </div>
           )}
         </Container>
-      </Layout>
+      </LayoutWithTheme>
     </>
   );
 }
