@@ -1,48 +1,12 @@
 import Image from "next/image";
 import ProductCard from "./product-card";
 import IconCard from "./icon-card";
+import Navbar from "./navbar";
 
 export default function ShopHomepage() {
   return (
     <div className="bg-white flex flex-col overflow-hidden items-stretch font-['Poppins,_-apple-system,_Roboto,_Helvetica,_sans-serif'] justify-start">
-      {/* Header */}
-      <div className="flex w-full flex-col items-stretch text-[15px] font-semibold tracking-[3.15px]">
-        <div className="bg-white border-[#dfdfdf] border-solid border-b flex w-full px-[70px] py-[25px] flex-col items-center justify-center md:px-5">
-          <div className="flex w-full max-w-[1200px] items-center gap-[100px] justify-between flex-wrap md:max-w-full">
-            {/* Logo */}
-            <div className="self-stretch flex mt-auto mb-auto items-center gap-[14px] text-black whitespace-nowrap justify-start md:whitespace-normal">
-              <div className="self-stretch relative flex mt-auto mb-auto w-6 flex-shrink-0">
-                <Image
-                  src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/90ce0763831319423bc24708626a2048c42a79f2"
-                  alt="Logo"
-                  width={24}
-                  height={24}
-                  className="object-contain"
-                />
-              </div>
-              <div className="self-stretch mt-auto mb-auto">SHOPAHOLIC</div>
-            </div>
-
-            {/* Menu Options */}
-            <div className="self-stretch flex min-w-[240px] mt-auto mb-auto items-center gap-[30px] text-black leading-normal justify-start flex-wrap md:max-w-full">
-              <div className="self-stretch mt-auto mb-auto">WOMEN</div>
-              <div className="self-stretch mt-auto mb-auto">MEN</div>
-              <div className="self-stretch mt-auto mb-auto">COLLECTIONS</div>
-              <div className="self-stretch mt-auto mb-auto">SHOP ALL</div>
-              <div className="text-[#B63333] self-stretch mt-auto mb-auto">
-                SALE
-              </div>
-            </div>
-
-            {/* Sign In Button */}
-            <div className="self-stretch flex mt-auto mb-auto items-center gap-[30px] text-white leading-normal justify-start">
-              <div className="self-stretch bg-black flex mt-auto mb-auto px-5 py-[10px] items-center gap-[10px] justify-center">
-                SIGN IN
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Navbar component is now imported separately */}
 
       {/* Body */}
       <div className="flex mt-[93px] w-full flex-col items-stretch md:max-w-full md:mt-10">
