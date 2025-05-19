@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="flex w-[1200px] max-w-full flex-col items-stretch">
+    <div className="flex w-full max-w-[1200px] flex-col items-stretch">
       <div
-        className="rounded-md relative min-h-[588px] w-full px-20 py-[237px] flex flex-col items-end justify-center md:max-w-full md:px-5 md:py-[100px]"
+        className="rounded-md relative min-h-[588px] w-full px-20 py-[237px] flex flex-col items-end justify-center md:max-w-full md:px-5 md:py-[100px] sm:min-h-[400px]"
         style={{
           backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/f5f486a35a80c0e8aea6037c50a5571ee46cf816')`,
           backgroundSize: "cover",
