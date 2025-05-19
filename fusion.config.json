@@ -1,0 +1,18 @@
+{
+  "command": "npm run dev",
+  "authenticateProxy": false,
+  "serverUrl": "http://localhost:3000",
+  "commitMode": "commits",
+  "allowedCommands": [
+    "npm *",
+    "pnpm *",
+    "yarn *",
+    "git diff *",
+    "git log *",
+    "git status *",
+    "echo *",
+    "cd *",
+    "find *",
+    "ls *"
+  ]
+}

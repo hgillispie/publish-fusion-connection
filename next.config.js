@@ -6,7 +6,7 @@ module.exports = {
         protocol: "https",
         hostname: "cdn.builder.io",
         port: "",
-        pathname: "/my-account/**",
+        pathname: "/**",
       },
     ],
   },
