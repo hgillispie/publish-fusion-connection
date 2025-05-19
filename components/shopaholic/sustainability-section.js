@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ShopaholicImage from "./shopaholic-image";
 
 export default function SustainabilitySection() {
   return (
@@ -18,7 +18,7 @@ export default function SustainabilitySection() {
         </div>
       </div>
       <div className="self-stretch relative flex min-w-[240px] my-auto w-[470px] md:max-w-full">
-        <Image
+        <ShopaholicImage
           src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/d954ad608a20840cd3a81f29461c95c988371492"
           alt="Sustainable Jeans"
           width={470}

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function HeroSection() {
   return (
     <div className="flex w-full max-w-[1200px] flex-col items-stretch">

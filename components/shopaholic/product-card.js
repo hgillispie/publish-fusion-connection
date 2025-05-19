@@ -1,10 +1,10 @@
-import Image from "next/image";
+import ShopaholicImage from "./shopaholic-image";
 
 export default function ProductCard({ image, title, price, color }) {
   return (
     <div className="flex min-w-[240px] flex-col items-stretch justify-start flex-1 flex-shrink-1 flex-basis-0">
       <div className="relative w-full">
-        <Image
+        <ShopaholicImage
           src={image}
           alt={title}
           width={339}

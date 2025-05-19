@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import ShopaholicImage from "./shopaholic/shopaholic-image";
 
 export default function ShopaholicNavbar() {
   return (
@@ -8,7 +8,7 @@ export default function ShopaholicNavbar() {
         <div className="flex w-full max-w-[1200px] items-center gap-[100px] justify-between flex-wrap md:max-w-full">
           {/* Logo Section */}
           <div className="self-stretch flex my-auto items-center gap-[14px] text-black whitespace-nowrap justify-start md:whitespace-normal">
-            <Image
+            <ShopaholicImage
               src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/3f71918de7367067ecc9b97fce2a4a64ea7f0528"
               alt="Shopaholic Logo"
               width={24}
