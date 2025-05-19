@@ -6,6 +6,7 @@ import HeroSection from "@/components/shopaholic/hero-section";
 import ProductsSection from "@/components/shopaholic/products-section";
 import SustainabilitySection from "@/components/shopaholic/sustainability-section";
 import BenefitsSection from "@/components/shopaholic/benefits-section";
+import ShopaholicImage from "@/components/shopaholic/shopaholic-image";
 
 export default function TestPage() {
   return (
