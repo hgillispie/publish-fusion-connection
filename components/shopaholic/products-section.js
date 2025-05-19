@@ -1,4 +1,5 @@
 import ProductCard from "./product-card";
+import ShopaholicImage from "./shopaholic-image";
 
 export default function ProductsSection() {
   const products = [
@@ -59,7 +60,7 @@ export default function ProductsSection() {
               className="flex min-w-[240px] flex-col items-stretch justify-start w-[339px]"
             >
               <div className="relative w-[339px] max-w-full">
-                <Image
+                <ShopaholicImage
                   src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/000e6998788e0d6a03d576303978f317a3db9a18"
                   alt="Product"
                   width={339}
