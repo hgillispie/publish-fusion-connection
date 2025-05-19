@@ -10,7 +10,7 @@ export default function Navbar() {
           <div className="self-stretch flex mt-auto mb-auto items-center gap-[14px] text-black whitespace-nowrap justify-start md:whitespace-normal">
             <div className="self-stretch relative flex mt-auto mb-auto w-6 flex-shrink-0">
               <Image
-                src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/90ce0763831319423bc24708626a2048c42a79f2"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/5b34ba489a9f49578eb87c294ec2ee61cd3c178febb84c7cac0ded8ea0cd4fef?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
                 alt="Logo"
                 width={24}
                 height={24}

@@ -7,7 +7,7 @@ export default function IconCard({ icon, title, description }) {
         <Image
           src={
             icon ||
-            "https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/3a580935349fc284245e2d512c16aa909e84dec2"
+            "https://cdn.builder.io/api/v1/image/assets/TEMP/c1f57ea5a40a36e9e9f3dfbde32c8c86c8a1df0c70b8d0cff131c0a2975ba0c9?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
           }
           alt={title || "Feature Icon"}
           width={91}

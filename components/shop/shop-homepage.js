@@ -15,7 +15,7 @@ export default function ShopHomepage() {
           <div className="flex w-[1200px] max-w-full flex-col items-stretch">
             <div className="rounded-md relative flex min-h-[588px] w-full px-20 py-[237px] flex-col items-end justify-center md:max-w-full md:px-5 md:py-[100px]">
               <Image
-                src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/f5f486a35a80c0e8aea6037c50a5571ee46cf816"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c625a9cb4fbf49a694e76ecc872a4fc79f92fa7c76be5d731d9329a79df6a15?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
                 alt="Hero Image"
                 fill
                 className="rounded-md object-cover"
@@ -42,19 +42,19 @@ export default function ShopHomepage() {
           <div className="flex mt-[43px] w-[1198px] max-w-full items-start gap-[25px] overflow-hidden text-[15px] text-center tracking-[0.75px] justify-start flex-wrap md:mt-10">
             {/* Product Cards */}
             <ProductCard
-              image="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/c7c0dc80625263fcbcbb8e733ef4595b89b46dee"
+              image="https://cdn.builder.io/api/v1/image/assets/TEMP/2380b67c5f144df98916f11a6d5121a15dd6af2f9b7f01c2b9db2c79f10c6ab5?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
               productName="Checker Fleece"
               price="$92"
               color="Soft Blue"
             />
             <ProductCard
-              image="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/b993a1035960676170c04f80f4199c598d5aa03c"
+              image="https://cdn.builder.io/api/v1/image/assets/TEMP/1f0bb6e5bbf0f5c9eca3c599ec5aec5ca2b3491199d8e2fed35a6a0ce1fddaf3?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
               productName="Fog Linen Jacket"
               price="$134"
               color="Soft Blue"
             />
             <ProductCard
-              image="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/faf8b65ae3d5d3dc3224b010e6a0616ee021d4ee"
+              image="https://cdn.builder.io/api/v1/image/assets/TEMP/bf14f3cc8fa340e7b8ec6fdc08d2bcce7c40e0dc3fbccea38b8bad3ac8a83a84?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
               productName="Angular Sunglasses"
               price="$31"
               color="Rose"
@@ -79,7 +79,7 @@ export default function ShopHomepage() {
             </div>
             <div className="rounded-md self-stretch relative flex min-w-[240px] mt-auto mb-auto w-[470px] md:max-w-full">
               <Image
-                src="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/d954ad608a20840cd3a81f29461c95c988371492"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c69b43fa7cd58d97a7acdea1fa3fdee9ef415a9b24295ffbcef69b3d9b5c7c2?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
                 alt="Jeans"
                 width={470}
                 height={493}
@@ -95,25 +95,25 @@ export default function ShopHomepage() {
             </div>
             <div className="flex mt-[63px] items-start gap-[33px] text-center tracking-[0.75px] justify-start flex-wrap md:max-w-full md:mt-10">
               <ProductCard
-                image="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/000e6998788e0d6a03d576303978f317a3db9a18"
+                image="https://cdn.builder.io/api/v1/image/assets/TEMP/cd00347bf9d40ef35eadda73ce6a65e1d1a94c36deb01b5ed24fa68bc3c8f041?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
                 productName="Checker Fleece"
                 price="$92"
                 color="Soft Blue"
               />
               <ProductCard
-                image="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/000e6998788e0d6a03d576303978f317a3db9a18"
+                image="https://cdn.builder.io/api/v1/image/assets/TEMP/08bc431c5da86ce70a3d31dc5fffad40eadee3e76f35f7c7da9dc8ff1c3f62ae?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
                 productName="Checker Fleece"
                 price="$92"
                 color="Soft Blue"
               />
               <ProductCard
-                image="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/000e6998788e0d6a03d576303978f317a3db9a18"
+                image="https://cdn.builder.io/api/v1/image/assets/TEMP/4a58e6b1d9ce1a22e9cbfcb83ce5e09b551c7f37c9bdb14a4bc2da1edbb661a2?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
                 productName="Checker Fleece"
                 price="$92"
                 color="Soft Blue"
               />
               <ProductCard
-                image="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/000e6998788e0d6a03d576303978f317a3db9a18"
+                image="https://cdn.builder.io/api/v1/image/assets/TEMP/35a55e88c9ccf3a8ecaec3fcf559eb71a79a6bd83b01f7cda13d28c08a96d729?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
                 productName="Checker Fleece"
                 price="$92"
                 color="Soft Blue"
@@ -133,17 +133,17 @@ export default function ShopHomepage() {
             </div>
             <div className="flex mt-[113px] items-start gap-[100px] text-[18px] justify-between flex-wrap md:max-w-full md:mt-10">
               <IconCard
-                icon="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/3a580935349fc284245e2d512c16aa909e84dec2"
+                icon="https://cdn.builder.io/api/v1/image/assets/TEMP/c1f57ea5a40a36e9e9f3dfbde32c8c86c8a1df0c70b8d0cff131c0a2975ba0c9?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
                 title="2-Day Shipping"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere erat a ante vestibulum, in volutpat ligula elementum."
               />
               <IconCard
-                icon="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/776e4b573ac1ad2b0f1ef9de9e6154338dc4369c"
+                icon="https://cdn.builder.io/api/v1/image/assets/TEMP/1fe0d30b8b96e97be4ea83f656d9ad5f66fc70cee8c50a94e1ef3584a0f06fa8?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
                 title="Carbon Neutral"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere erat a ante vestibulum, in volutpat ligula elementum."
               />
               <IconCard
-                icon="https://cdn.builder.io/api/v1/image/assets/24272629d2bd4d1a8956cce15af1b3dc/fc0b00807438000a3e74a82b05fa96c4ddd943d1"
+                icon="https://cdn.builder.io/api/v1/image/assets/TEMP/2b7a84fbb7b78c4fa2dbf446254eb7bc8a42a72b94f83f2d4c2d9d94d33032b3?apiKey=8f6bae86bfa3487eb1a18f263118c832&"
                 title="Advanced Dye Tech"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere erat a ante vestibulum, in volutpat ligula elementum."
               />
